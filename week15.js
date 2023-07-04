@@ -111,10 +111,13 @@ for(const item of numbers) {
 // Выведите длину каждого слова из массива строк в консоль
 const list = ['apple', 'banana', 'cherry'];
 
-// если я правильно поняла, то надо применить метод forEach.. но я не могу понять как правильно написать функцию
+let lengths = list.map(item => item.length);
+console.log(lengths);
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
+
+console.log(words.map(e => e.toUpperCase()));
 
 //Задание 15
 // Подсчитайте количество гласных букв в строке
@@ -123,12 +126,24 @@ const greeting = 'Hello, world!';
 let vowelCount = 0;
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 
+const vowels2 = s => s.split("").filter(c => "aeiou".includes(c)).length;
+ 
+console.log(vowels2(greeting));
+
 //Задание 16
 // Объедините все строки массива в одну строку с пробелами между ними
 const words = ['Hello', 'world', '!'];
 
+console.log(words.join(' '));
+
 //Задание 17
 // Выведите числа от 1 до 10 в консоль используя цикл while
+
+let k = 1;
+while (k <= 10) {
+  console.log(k)
+  k++
+};
 
 //Задание 18
 // Выведите числа от 1 до 10 в консоль в обратном порядке используя цикл while
