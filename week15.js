@@ -91,12 +91,27 @@ for(const number of array) {
 // Подсказка: вам понадобится метод массивов split
 const sentences = ['Hello, world!', 'How are you?'];
 
+let str1 = String(sentences);
+let splitSentences = str1.split('');
+
+console.log(splitSentences);
+
+
 //Задание 12
 // Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
+
+
+for(const item of numbers) {
+  // не понимаю как куда чего...
+  console.log(item);
+}
+  
 
 //Задание 13
 // Выведите длину каждого слова из массива строк в консоль
 const list = ['apple', 'banana', 'cherry'];
+
+// если я правильно поняла, то надо применить метод forEach.. но я не могу понять как правильно написать функцию
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
