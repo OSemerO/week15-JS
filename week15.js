@@ -1,9 +1,44 @@
-let cities = ['Москва', 'Санкт-Петербург','Калининград','Токио','Хельсинки','Таллин','Сеул','Астана','Пекин'];
-let temp = [];
+
+// массив с городами
+let cities = ['Москва', 'Санкт-Петербург','Калининград','Токио','Хельсинки'];
+
+// массив, куда будет "складываться" информация о температуре
+let temperatures = [];
 
 
-for (let i = 0; i < cities.length; i++) {
-  const city = cities[i];
-  const temperature = prompt(`Введите температуру в ${city} (в градусах Цельсия):`);
-  console.log(`Город ${city}: температура ${temperature} градусов Цельсия`);
+// Перебираем массив городов с помощью цикла for
+for (let city of cities) {
+  // Используем prompt() для запроса у пользователя температуры
+  const temperature = prompt(`Введите температуру в городе ${city} (в градусах Цельсия):`);
+
+  // Если пользователь не ввел температуру, выводим сообщение об ошибке
+  if (!temperature) {
+    alert("Ошибка: не введена температура");
+    continue;
+  }
+
+// Добавляем температуру в массив температур
+  temperatures.push(temperature);
 }
+
+// Выводим список городов и их температур в консоль
+console.log("Список городов и температур");
+console.table(cities.map((city, index) => [city, temperatures[index]]));
+
+// Находим максимальную и минимальную температуры
+const maxTemperature = Math.max(...temperatures);
+const minTemperature = Math.min(...temperatures);
+
+// Отображаем информацию о погоде в разных городах
+console.log(`Максимальная температура: ${maxTemperature}°C`);
+console.log(`Минимальная температура: ${minTemperature}°C`);
+
+// собираем данные вместе и выводим на html страницу 
+
+document.querySelector('.city__name').innerText = `${cities[0]}    ${cities[1]}     ${cities[2]}    ${cities[3]}    ${cities[4]}`;
+
+document.querySelector('.city__temperature').innerHTML = `${temperatures}`;  
+
+document.querySelector('.city__max-temperature').innerHTML = `Максимальная температура: ${maxTemperature}°C`; 
+
+document.querySelector('.city__min-temperature').innerHTML = `Минимальная температура: ${minTemperature}°C`; 
