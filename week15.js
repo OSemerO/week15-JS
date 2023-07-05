@@ -148,27 +148,82 @@ while (k <= 10) {
 //Задание 18
 // Выведите числа от 1 до 10 в консоль в обратном порядке используя цикл while
 
+let num = 10;
+
+while (num == 1) {
+	num = num - 1;
+}
+
+console.log(num); 
+
 //Задание 19
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
 let allPositive = true;
 
+let b = 0;
+
+while (allPositive && b < allNumbers.length) {
+  if (allNumbers[b] > 0) {
+  allPositive = false;
+  break;
+  }
+  b++;
+}
+
+console.log(allPositive);
+
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
 const random = [2, 4, 6, -3, 8, 10];
 
+let v = 0;
+
+do {
+console.log(random[v]);
+v++;
+}
+while (random[v] > 0)
+
 //Задание 21
 // Выведите числа от 1 до 100, пропуская числа, которые делятся на 3 используя цикл do...while
+
+v = 0;
+
+do {
+  if (v % 2 === 0) console.log(v)
+  v++;
+}
+while ( v < 101)
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
 
+let askNum = prompt('введите число');
+
+do {
+  console.log(askNum);
+  let summa = +askNum + +askNum;
+  console.log('сумма =', summa);
+} while ( summa <= 100 )
+
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
+
+const headers = document.querySelectorAll('h4');
+for (let head of headers) {
+head.className = head.className + 'blue';
+}
 
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
 // Подсказка: используйте методы объекта Math и длину массива alphabet
-let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-let randomString = '';
+
+let abc = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+let randomAbc = abc[Math.floor(Math.random() * abc.length)];
+let newAbc = "";
+while (newAbc.length < 6) {
+  console.log(newAbc += randomAbc);
+  randomAbc = abc[Math.floor(Math.random() * abc.length)];
+}
