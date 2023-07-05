@@ -98,14 +98,14 @@ console.log(splitSentences);
 
 
 //Задание 12
-// Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
+// Выведите сумму всех элементов массива используя цикл for..of. const numbers = [1, 2, 3, 4, 5];
 
+let total = 0;
 
-for(const item of numbers) {
-  // не понимаю как куда чего...
-  console.log(item);
+for (let number of numbers) {
+  total += number;
 }
-  
+console.log(`Сумма элементов массива: ${total}`);
 
 //Задание 13
 // Выведите длину каждого слова из массива строк в консоль
@@ -207,6 +207,16 @@ do {
   let summa = +askNum + +askNum;
   console.log('сумма =', summa);
 } while ( summa <= 100 )
+
+// function getSum() {
+//   let sum = 0; 
+//   while (sum < 100) { // цикл выполняется до тех пор, пока сумма меньше 100
+//     let input = Number(prompt("Введите число: ")); 
+//     sum += input; 
+//   }
+//   return sum; 
+// }
+
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
