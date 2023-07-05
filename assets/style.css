@@ -14,6 +14,25 @@ body {
     max-width: 1000px;
     margin: auto;
     display: flex;
-    flex-direction: initial;
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+.city__name {
+    font-weight: 600;
+    color: darkgoldenrod;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.city__temperature {
+    font-weight: 500;
+    color: rgb(219, 234, 14);
+    font-size: 25px;
+    padding: 30px;
+}
+
+.city__min-temperature, .city__max-temperature {
+    font-weight: 500;
+    font-size: 25px;
+    padding: 20px;
 }

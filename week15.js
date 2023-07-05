@@ -35,10 +35,15 @@ console.log(`Минимальная температура: ${minTemperature}°C
 
 // собираем данные вместе и выводим на html страницу 
 
-document.querySelector('.city__name').innerText = `${cities[0]}    ${cities[1]}     ${cities[2]}    ${cities[3]}    ${cities[4]}`;
+document.querySelector('.city__name').innerText = `1. ${cities[0]} 
+  2. ${cities[1]}     
+  3. ${cities[2]}    
+  4. ${cities[3]}   
+  5. ${cities[4]}`;
 
 document.querySelector('.city__temperature').innerHTML = `${temperatures}`;  
 
 document.querySelector('.city__max-temperature').innerHTML = `Максимальная температура: ${maxTemperature}°C`; 
 
 document.querySelector('.city__min-temperature').innerHTML = `Минимальная температура: ${minTemperature}°C`; 
+
