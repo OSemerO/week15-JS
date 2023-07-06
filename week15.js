@@ -237,3 +237,5 @@ while (newAbc.length < 6) {
   console.log(newAbc += randomAbc);
   randomAbc = abc[Math.floor(Math.random() * abc.length)];
 }
+
+
