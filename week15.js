@@ -47,3 +47,23 @@ document.querySelector('.city__max-temperature').innerHTML = `Максималь
 
 document.querySelector('.city__min-temperature').innerHTML = `Минимальная температура: ${minTemperature}°C`; 
 
+// задание со *
+
+let numbers = []; // пустой массив
+
+// заполняем массив числами от -10 до 10
+for (let i = -10; i <= 10; i++) {
+  numbers.push(i);
+}
+
+// удаляем все отрицательные числа
+numbers = numbers.filter(num => num >= 0);
+
+// возводим каждое число в квадрат
+numbers = numbers.map(num => Math.pow(num, 2));
+
+// сортируем числа в порядке убывания и удаляем повторяющиеся
+numbers.sort((a, b) => b - a);
+numbers = [...new Set(numbers)];
+
+console.log(numbers); 
